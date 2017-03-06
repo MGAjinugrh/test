@@ -1,0 +1,208 @@
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git branch
+* master
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git branch pertamax
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git pull origin pertamax
+From https://github.com/MGAjinugrh/test
+ * branch            pertamax   -> FETCH_HEAD
+Auto-merging test.txt
+CONFLICT (content): Merge conflict in test.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master|MERGING)
+$ git merge --reset
+error: unknown option `reset'
+usage: git merge [<options>] [<commit>...]
+   or: git merge [<options>] <msg> HEAD <commit>
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --continue            continue the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --overwrite-ignore    update ignored files (default)
+
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master|MERGING)
+$ git reset --merge
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git checkout pertamax
+Switched to branch 'pertamax'
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git pull origin pertamax
+From https://github.com/MGAjinugrh/test
+ * branch            pertamax   -> FETCH_HEAD
+Auto-merging test.txt
+CONFLICT (content): Merge conflict in test.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax|MERGING)
+$ git reset --merge
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git clone https://github.com/MGAjinugrh/test pertamax
+Cloning into 'pertamax'...
+remote: Counting objects: 21, done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 21 (delta 2), reused 21 (delta 2), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git clone pertamax
+fatal: repository 'pertamax' does not exist
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git checkout pertamax
+Switched to branch 'pertamax'
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git pull origin pertamax
+From https://github.com/MGAjinugrh/test
+ * branch            pertamax   -> FETCH_HEAD
+Auto-merging test.txt
+CONFLICT (content): Merge conflict in test.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax|MERGING)
+$ git reset --merge
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git branch -a
+  master
+* pertamax
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/keduax
+  remotes/origin/master
+  remotes/origin/pertamax
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git branch -d pertamax
+error: Cannot delete branch 'pertamax' checked out at 'D:/Guruh/Github/Test/test'
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git branch -d pertamax
+Deleted branch pertamax (was e54369e).
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/keduax
+  remotes/origin/master
+  remotes/origin/pertamax
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git checkout -b master origin/master
+fatal: A branch named 'master' already exists.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git checkout -b keduax origin/keduax
+Switched to a new branch 'keduax'
+Branch keduax set up to track remote branch keduax from origin.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (keduax)
+$ git branch
+* keduax
+  master
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (keduax)
+$ git checkout -b pertamax origin/pertamax
+Switched to a new branch 'pertamax'
+Branch pertamax set up to track remote branch pertamax from origin.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git branch -d master
+warning: deleting branch 'master' that has been merged to
+         'refs/remotes/origin/master', but not yet merged to HEAD.
+Deleted branch master (was e54369e).
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git checkout -b master origin/master
+Switched to a new branch 'master'
+Branch master set up to track remote branch master from origin.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git branch
+  keduax
+* master
+  pertamax
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git branch -a
+  keduax
+* master
+  pertamax
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/keduax
+  remotes/origin/master
+  remotes/origin/pertamax
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (master)
+$ git checkout pertamax
+Switched to branch 'pertamax'
+Your branch is up-to-date with 'origin/pertamax'.
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git add test.txt
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git commit -m "diubah dari PC bapak"
+[pertamax d921704] diubah dari PC bapak
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$ git push origin pertamax
+Username for 'https://github.com': mguruha
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 344 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/MGAjinugrh/test
+   c62aca3..d921704  pertamax -> pertamax
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+(reverse-i-search)`': ^C
+
+Purnomo Fitra@mp MINGW64 /d/Guruh/Github/Test/test (pertamax)
+$
